@@ -17,11 +17,8 @@
       <h1 id="title">WYNAGE</h1>
       <div id="user_header" class="navbar-collapse collapse navbar-responsive-collapse">
         <ul class="header_links nav navbar-nav">
-          <!-- <li><%= link_to 'Home', root_path %></li> -->
         <li><%= link_to 'Timeline', all_path %></li>
         <li><%= link_to 'Post', posts_path %></li>
-        <!-- <%= link_to 'Pictures', pictures_path %> | -->
-        <!-- if we have current user it will display logged in as current user -->
         <% if current_user %>
           Logged in as <%= current_user.email %>
         <li><%= link_to "Log Out", logout_path %></li>
