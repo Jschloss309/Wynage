@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
+      <!-- <th>User</th> -->
       <th>Title</th>
       <th>Date Created</th>
       <!-- <th>Content</th> -->
@@ -14,14 +14,14 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.user %></td>
+        <!-- <td><%= post.user %></td> -->
         <td><%= post.title %></td>
         <!-- <td><%= post.content %></td> -->
         <td>
         <%= post.date_created %>
         </td>
         <td><%= link_to 'Show', post %></td>
-        <td><% if current_user && post.user == current_user %><%= link_to 'Edit', edit_post_path(post) %><% end %></td>
+        <!-- <td><% if current_user && post.user == current_user %><%= link_to 'Edit', edit_post_path(post) %><% end %></td> -->
         <td><% if current_user && post.user == current_user %><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
       </tr>
     <% end %>
