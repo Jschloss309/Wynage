@@ -1,34 +1,10 @@
-<h1>Posts</h1>
+<div class="list-group">
+    <h1 class="list-group-item active">Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <!-- <th>User</th> -->
-      <th>Title</th>
-      <th>Date Created</th>
-      <!-- <th>Content</th> -->
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <!-- <td><%= post.user %></td> -->
-        <td><%= post.title %></td>
-        <!-- <td><%= post.content %></td> -->
-        <td>
-        <%= post.date_created %>
-        </td>
-        <td><%= link_to 'Show', post %></td>
-        <!-- <td><% if current_user && post.user == current_user %><%= link_to 'Edit', edit_post_path(post) %><% end %></td> -->
-        <td><% if current_user && post.user == current_user %><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-<% if current_user %>
-<%= link_to 'New Post', new_post_path %>
-<% end %>
+  <% @posts.each do |post| %>
+    <%= link_to post.title, post, class: "list-group-item" %>
+  <% end %>
+  <% if current_user %>
+  <%= link_to 'New Post', new_post_path, class: "list-group-item active" %>
+  <% end %>
+</div>
