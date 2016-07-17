@@ -1,22 +1,10 @@
+<div id="imgWrapper"
 <div class="row">
   <div class="col-xs-6 col-md-3">
-    <a href="#" class="thumbnail">
-      <img src="..." alt="Image for post">
-    </a>
+
+    <% @posts.each do |post| %>
+    <h2><%= post.title %></h2>
+    <%= link_to image_tag post.url, class: "thumbnail", alt: "Image for post" %>
+    <% end %>
   </div>
-  ...
 </div>
-
-
- <div id="imgWrapper"
-   <ul>
-     <% @posts.each do |post| %>
-         <li>
-           <div>
-             <h2><%= post.title %></h2>
-             <%= image_tag post.url %>
-           </div>
-         </li>
-     <% end %>
-   </ul>
- </div>
