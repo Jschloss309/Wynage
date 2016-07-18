@@ -1,5 +1,6 @@
-<div class="Login">
-  <h1>Log In</h1>
+<div class="form_container">
+<div class="login_column">
+  <h1 id="log_in">Log In</h1>
 
   <%= form_tag sessions_path do %>
   <div class="field">
@@ -14,6 +15,6 @@
 
   <div class="actions">
     <%= submit_tag "log In" %>
-  </div>
+  <% end %>
 </div>
-<% end %>
+</div>
