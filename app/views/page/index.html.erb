@@ -8,14 +8,16 @@
   </head>
   <body>
   <div class="jumbotron">
-      <h1><%= "Welcome To WYNAGE" %></h1>
-      <h1><%= "#{current_user}" %></h1>
+      <% if !current_user %>
+      <h1><%= "Welcome To WYNAGE!" %></h1>
       <p>
-      Hella jean shorts VHS keffiyeh, synth umami waistcoat. Delectus put a bird on it forage, laborum magna deserunt keffiyeh heirloom nihil quis assumenda plaid tilde williamsburg. YOLO literally williamsburg pabst accusamus craft beer. Marfa semiotics eiusmod health goth. Ethical fingerstache chicharrones tattooed, placeat blog DIY flannel four dollar toast. Deserunt salvia tousled, placeat reprehenderit godard odio slow-carb quis consequat blog gluten-free tempor biodiesel adipisicing. Chambray gluten-free tilde schlitz, incididunt hashtag fashion axe cronut listicle chia retro kogi.
+        Hella jean shorts VHS keffiyeh, synth umami waistcoat. Delectus put a bird on it forage, laborum magna deserunt keffiyeh heirloom nihil quis assumenda plaid tilde williamsburg. YOLO literally williamsburg pabst accusamus craft beer. Marfa semiotics eiusmod health goth. Ethical fingerstache chicharrones tattooed, placeat blog DIY flannel four dollar toast. Deserunt salvia tousled, placeat reprehenderit godard odio slow-carb quis consequat blog gluten-free tempor biodiesel adipisicing. Chambray gluten-free tilde schlitz, incididunt hashtag fashion axe cronut listicle chia retro kogi.
       </p>
+      <a class="btn btn-primary btn-lg" role="button" <%= link_to "TRY NOW!", signup_path %>
+        <%else%>
+
+      <h1><%= "Welcome To WynFAM, #{current_user.first_name}!" %></h1>
       <p>
-        <% if !current_user %>
-        <a class="btn btn-primary btn-lg" role="button" <%= link_to "TRY NOW!", posts_path %>
           <% end %>
         </a>
       </p>
