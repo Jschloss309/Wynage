@@ -15,7 +15,32 @@ li{
 
 .form-inline {
   text-align: center;
+
 }
+.form-control {
+  height: 3em;
+  border-color: #222222;
+}
+
+.form-control:focus {
+  border-color: currentColor !important;
+  box-shadow: white !important;
+}
+
 a {
   width: 100%;
+}
+.input-group-addon{
+  background-color: #222222 !important;
+  border-color: #222222 !important;
+}
+
+.coloring {
+  background-color: #222222 !important;
+  border-color: #222222 !important;
+  color: #9c9c9c !important;
+  height: 2em;
+}
+.coloring:hover {
+  color: white !important;
 }
