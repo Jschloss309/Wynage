@@ -10,7 +10,10 @@
   <div class="jumbotron">
       <% if !current_user %>
       <h1><%= "Welcome To WYNAGE!" %></h1>
-      <ul>
+      <div class="description">
+        Don't even think about what comes next. Just click below and find out!
+      </div>
+      <!-- <ul>
         <li>Hella jean shorts VHS keffiyeh, synth umami waistcoat.
         </li>
         <li>Delectus put a bird on it forage, laborum magna deserunt keffiyeh heirloom nihil quis assumenda plaid tilde williamsburg.
@@ -19,7 +22,7 @@
         </li>
         <li>Marfa semiotics eiusmod health goth.
         </li>
-      </ul>
+      </ul> -->
       </p>
       <a class="btn btn-primary btn-lg" role="button" <%= link_to "TRY NOW!", signup_path %>
         <%else%>

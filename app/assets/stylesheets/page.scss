@@ -13,6 +13,12 @@ li{
   display: inline;
 }
 
+.description {
+  text-align: center;
+  font-size: 1.2em;
+
+}
+
 .form-inline {
   text-align: center;
 
@@ -24,7 +30,7 @@ li{
 
 .form-control:focus {
   border-color: currentColor !important;
-  box-shadow: white !important;
+  box-shadow: none !important;
 }
 
 a {
