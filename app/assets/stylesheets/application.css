@@ -21,6 +21,18 @@ div#title{
   display: inline;
 }
 
+footer.bottom{
+  position:fixed;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+
+}
+ .foot_links li{
+  display: inline-flex;
+  justify-content: space-between;
+  padding-left: 1em;
+}
 /*----------------------------------------*/
 /*-----------------FOOTER-----------------*/
 /*----------------------------------------*/
