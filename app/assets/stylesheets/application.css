@@ -21,7 +21,7 @@ div#title{
   display: inline;
 }
 
-footer.bottom{
+footer.bottom {
   position:fixed;
   bottom: 0;
   width: 100%;
